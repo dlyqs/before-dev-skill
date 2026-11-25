@@ -1,4 +1,4 @@
-# grill-requirements
+# before-dev-skill
 
 An agent skill for the phase **before development starts**: it interviews stakeholders (or processes an existing transcript), challenges the premise, drills each rule down to its edge cases, catches contradictions as they appear, and writes everything into traceable documents that developers can plan from.
 
@@ -46,18 +46,18 @@ git clone git@github.com:dlyqs/before-dev-skill.git ~/gitlocal/before-dev-skill
 ```
 
 ```bash
-ln -s ~/gitlocal/before-dev-skill ~/.claude/skills/grill-requirements
+ln -s ~/gitlocal/before-dev-skill ~/.claude/skills/before-dev-skill
 ```
 
 ```bash
-ln -s ~/gitlocal/before-dev-skill ~/.codex/skills/grill-requirements
+ln -s ~/gitlocal/before-dev-skill ~/.codex/skills/before-dev-skill
 ```
 
 ## Usage
 
 Prepare a meeting:
 
-> Use grill-requirements to prepare my requirements meeting with the product owner about X. Read the docs in this project first, resolve anything the documents already answer, and give me a one-page agenda that puts scope-changing questions first.
+> Use before-dev-skill to prepare my requirements meeting with the product owner about X. Read the docs in this project first, resolve anything the documents already answer, and give me a one-page agenda that puts scope-changing questions first.
 
 Host it live:
 
@@ -69,7 +69,7 @@ Wrap up:
 
 Resume later:
 
-> Use grill-requirements to resume docs/requirements/x/. I have new answers from operations on last time's open questions.
+> Use before-dev-skill to resume docs/requirements/x/. I have new answers from operations on last time's open questions.
 
 ## Files
 

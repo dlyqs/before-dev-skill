@@ -1,5 +1,5 @@
 ---
-name: grill-requirements
+name: before-dev-skill
 description: 开发前的需求追问与落盘。主持需求访谈或整理会议逐字稿，质疑目标前提、逐个追问规则边界、发现遗漏与矛盾，产出可追溯的事实文档、需求明细、未决问题和验收场景。适用于目标含糊、新功能立项、旧系统重构/迁移、系统集成、流程变更、多方口径冲突、首版范围裁剪等任何复杂需求。Use for requirements elicitation, grilling stakeholders, PRD/spec clarification, scope cutting, pre-development discovery.
 ---
 
