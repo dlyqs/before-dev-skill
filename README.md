@@ -9,7 +9,8 @@ Works with Claude Code, Codex, and any agent that loads `SKILL.md`-style skills.
 ## What it does
 
 - **Challenges the premise first.** Before listing features it asks why this is worth doing, what it costs to not do it, how success will be observed, what smaller alternatives exist, what is explicitly out of scope, and who makes the call.
-- **One question at a time.** Each question states what the answer will change. It restates what it heard, then picks the condition most likely to break that rule, using concrete business examples (counter-examples, boundary values, lifecycle, failure and recovery, "5 whys").
+- **Batched rounds, ordered by dependency.** Each round lists every question that can be answered now (usually 3–8), each with what it affects, options, and a recommended answer, so most can be answered with a single letter ("1A 2B 3 not sure"). Questions that depend on an earlier answer wait for the next round. Switch to one-question-at-a-time on request (e.g. live with a decision-maker).
+- **Questions aimed at the edges.** Each question restates the rule it heard, then probes the condition most likely to break it with a concrete business example (counter-examples, boundary values, lifecycle, failure and recovery, "5 whys").
 - **Live contradiction detection.** Every new answer is checked against recorded decisions, facts, requirements and assumptions; conflicts are raised immediately, not at wrap-up.
 - **Never answers on behalf of the business.** Anything the AI infers is logged as an assumption (`H-xx`) until someone confirms it. Recommended answers are offered only as "proposals".
 - **Evidence with boundaries.** When there is an existing system, claims are checked against code, API docs, and inventories, and each fact records what it does and does not prove (e.g. a hidden button proves UI visibility, not server-side authorization).
@@ -22,7 +23,7 @@ Works with Claude Code, Codex, and any agent that loads `SKILL.md`-style skills.
 | Mode | What happens |
 | --- | --- |
 | Pre-meeting prep | Reads existing material, resolves what documents can answer, runs the coverage scan, produces a one-page agenda ordered by decision dependency and impact. |
-| Live interview | Hosts the meeting one question at a time; obeys "skip", "five minutes left", "wrap up". |
+| Live interview | Hosts the meeting in batched rounds; obeys "skip", "five minutes left", "wrap up", "one at a time". |
 | Transcript processing | Extracts attributed statements, decisions, disagreements and gaps from notes or a transcript. |
 | Follow-up / change | Resumes from the previous documents, traces impact through stable IDs, keeps superseded decisions. |
 | Async questionnaire | Generates prioritized questions for absent stakeholders, each with purpose, options and an optional recommendation. |
@@ -61,7 +62,7 @@ Prepare a meeting:
 
 Host it live:
 
-> Start hosting. One question at a time, wait for our answer. When someone says "same as the old system", challenge it with a concrete exception. Record decisions, objections and open items by speaker.
+> Start hosting. Ask each round's independent questions together and wait for our answers; hold dependent questions for the next round. When someone says "same as the old system", challenge it with a concrete exception. Record decisions, objections and open items by speaker.
 
 Wrap up:
 
