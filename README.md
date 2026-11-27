@@ -78,11 +78,12 @@ Resume later:
 SKILL.md                 workflow, questioning techniques, pacing, hand-off
 references/coverage.md   coverage dimensions, per-type must-ask questions, common hidden contradictions
 references/records.md    ID scheme, document templates, questionnaire format, Definition of Ready
+upstream/                unmodified copies of the source skills, for reading and side-by-side testing
 ```
 
 ## Credits
 
-Built by combining ideas from:
+Built by combining ideas from the following. Original copies of the Matt Pocock and Superpowers skills are kept in [`upstream/`](upstream/README.md).
 
 - Matt Pocock's skills — [`grill-me`, `grilling`, `grill-with-docs`, `domain-modeling`, `to-questionnaire`, `to-spec`, `to-tickets`](https://github.com/mattpocock/skills)
 - [Superpowers](https://github.com/obra/superpowers) `brainstorming`
